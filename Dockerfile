@@ -38,6 +38,6 @@ RUN set -x \
 #EXPOSE 8080
 #CMD ["catalina.sh", "run"]
 
-ADD entrypoint.sh $CATALINA_HOME/entrypoint.sh
-RUN chmod +x $CATALINA_HOME/entrypoint.sh
-CMD ["$CATALINA_HOME/entrypoint.sh", "run"]
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+CMD ["/entrypoint.sh", "run"]
