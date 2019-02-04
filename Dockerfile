@@ -40,4 +40,4 @@ RUN set -x \
 
 ADD entrypoint.sh $CATALINA_HOME/entrypoint.sh
 RUN chmod +x $CATALINA_HOME/entrypoint.sh
-CMD ["entrypoint.sh", "run"]
+CMD ["$CATALINA_HOME/entrypoint.sh", "run"]
