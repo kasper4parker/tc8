@@ -47,4 +47,4 @@ RUN set -x \
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-CMD ["/entrypoint.sh", "run"]
+CMD /entrypoint.sh
