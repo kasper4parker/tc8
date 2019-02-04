@@ -1,0 +1,9 @@
+{
+  "name": "TC8",
+  "description": "deploy TC8 to Heroku.",
+  "keywords": ["TC8"],
+  "env": {},
+  "website": "https://github.com/kasper4parker/tc8",
+  "repository": "https://github.com/kasper4parker/tc8",
+  "stack": "container"
+ }
