@@ -1,4 +1,7 @@
-FROM java:8-jre
+FROM heroku/heroku:18
+
+#*****************************
+#FROM java:8-jre
 #https://github.com/docker-library/tomcat
 
 ENV CATALINA_HOME /usr/local/tomcat
@@ -34,6 +37,7 @@ RUN set -x \
     && rm bin/*.bat \
     && rm tomcat.tar.gz*
 
+#*****************************
 # ADD ./*.war $CATALINA_HOME/webapps/ROOT/
 #EXPOSE 8080
 #CMD ["catalina.sh", "run"]
