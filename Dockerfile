@@ -35,6 +35,9 @@ RUN set -x \
     && rm tomcat.tar.gz*
 
 # ADD ./*.war $CATALINA_HOME/webapps/ROOT/
+#EXPOSE 8080
+#CMD ["catalina.sh", "run"]
 
-EXPOSE 8080
-CMD ["catalina.sh", "run"]
+ADD entrypoint.sh $CATALINA_HOME/entrypoint.sh
+RUN chmod +x $CATALINA_HOME/entrypoint.sh
+CMD ["entrypoint.sh", "run"]
