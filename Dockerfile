@@ -42,6 +42,9 @@ RUN set -x \
 #EXPOSE 8080
 #CMD ["catalina.sh", "run"]
 
+
+
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 CMD ["/entrypoint.sh", "run"]
